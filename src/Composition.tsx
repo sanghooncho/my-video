@@ -1,4 +1,5 @@
 import { useCurrentFrame, useVideoConfig, interpolate, Easing } from "remotion";
+import { SafeZoneGuide } from "./components/SafeZoneGuide";
 
 export const MyComposition = () => {
   const frame = useCurrentFrame();
@@ -28,6 +29,7 @@ export const MyComposition = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        position: "relative",
       }}
     >
       <div
@@ -40,6 +42,9 @@ export const MyComposition = () => {
       >
         안녕
       </div>
+
+      {/* Debug overlay: safe-zone guide for Reels. Disable for final renders. */}
+      <SafeZoneGuide enabled={true} />
     </div>
   );
 };
