@@ -1,0 +1,8 @@
+{
+    "error": {
+        "message": "Project `proj_Qryo3p2aQaT9PLmmKfoDOQqw` does not have access to model `tts-1-hd`",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "model_not_found"
+    }
+}
