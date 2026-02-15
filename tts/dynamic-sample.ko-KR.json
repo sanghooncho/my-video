@@ -1,0 +1,14 @@
+{
+  "lang": "ko-KR",
+  "gender": "female",
+  "speakingRate": 1.02,
+  "pitch": 0,
+  "outDir": "public/generated-tts",
+  "prefix": "dynamic_sample",
+  "lines": [
+    {"id": "s1", "text": "예약 잡고도 노쇼 나면 멘탈 나가죠."},
+    {"id": "s2", "text": "문제는 확정이 아니라 불안이에요. 고객은 직전까지 흔들립니다."},
+    {"id": "s3", "text": "해결은 간단해요. 30초 안에 시간, 장소, 주의사항, 변경 링크를 보내세요."},
+    {"id": "s4", "text": "노쇼 줄이고 상담만 하세요. 프로필 링크에서 확인."}
+  ]
+}

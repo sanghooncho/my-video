@@ -26,7 +26,16 @@ export const RemotionRoot: React.FC = () => {
       align: 'center',
       font: { title: 74, body: 44 },
     },
-    bgm: { src: 'bgm.mp3', volume: 0.12 },
+    bgm: { src: 'bgm.mp3', volume: 0.10 },
+    voiceover: {
+      provider: 'gcp-tts',
+      tracks: [
+        { atFrame: 0, src: 'generated-tts/dynamic_sample_s1_ko-KR.mp3', volume: 1 },
+        { atFrame: 90, src: 'generated-tts/dynamic_sample_s2_ko-KR.mp3', volume: 1 },
+        { atFrame: 210, src: 'generated-tts/dynamic_sample_s3_ko-KR.mp3', volume: 1 },
+        { atFrame: 360, src: 'generated-tts/dynamic_sample_s4_ko-KR.mp3', volume: 1 }
+      ]
+    },
     scenes: [
       {
         id: 's1',

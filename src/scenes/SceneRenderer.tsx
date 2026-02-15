@@ -56,7 +56,18 @@ const SafeCaptionBlock: React.FC<{
         paddingBottom: align === 'bottom' ? 40 : 0,
       }}
     >
-      <div style={{ maxWidth: 900, marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
+      <div
+        style={{
+          width: '100%',
+          maxWidth: 900,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
         {scene.text?.title ? (
           <div
             style={{
