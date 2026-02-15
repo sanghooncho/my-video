@@ -33,7 +33,12 @@ const SafeCaptionBlock: React.FC<{
   const frame = useCurrentFrame();
   const safe = spec.captions.safe;
 
-  const opacity = fadeIn(frame, sceneStart + 3, Math.min(12, scene.duration / 4));
+  // Convert to local scene frame for predictable animation
+  const local = frame - sceneStart;
+  const opacity = fadeIn(local, 3, Math.min(12, scene.duration / 4));
+
+  const align = spec.captions.align;
+  const justifyContent = align === 'bottom' ? 'flex-end' : 'center';
 
   return (
     <AbsoluteFill
@@ -44,13 +49,14 @@ const SafeCaptionBlock: React.FC<{
         top: safe.top,
         bottom: safe.bottom,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent,
         alignItems: 'center',
         textAlign: 'center',
         opacity,
+        paddingBottom: align === 'bottom' ? 40 : 0,
       }}
     >
-      <div style={{ maxWidth: 900 }}>
+      <div style={{ maxWidth: 900, marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
         {scene.text?.title ? (
           <div
             style={{
@@ -60,6 +66,8 @@ const SafeCaptionBlock: React.FC<{
               lineHeight: 1.08,
               textShadow: '0 8px 24px rgba(0,0,0,0.45)',
               whiteSpace: 'pre-line',
+              textAlign: 'center',
+              width: '100%',
             }}
           >
             {scene.text.title}
@@ -75,6 +83,8 @@ const SafeCaptionBlock: React.FC<{
               lineHeight: 1.25,
               textShadow: '0 8px 24px rgba(0,0,0,0.45)',
               whiteSpace: 'pre-line',
+              textAlign: 'center',
+              width: '100%',
             }}
           >
             {scene.text.body}
