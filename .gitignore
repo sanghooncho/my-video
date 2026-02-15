@@ -24,3 +24,11 @@ out
 # Local render env + outputs
 .mamba/
 renders/
+
+# Secrets
+config/.env
+config/*.json
+!config/.env.example
+
+# Generated TTS
+public/generated-tts/

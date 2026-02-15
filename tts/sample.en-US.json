@@ -1,0 +1,12 @@
+{
+  "lang": "en-US",
+  "gender": "female",
+  "speakingRate": 1.02,
+  "pitch": 0,
+  "outDir": "public/generated-tts",
+  "prefix": "sample",
+  "lines": [
+    {"id": "tts1", "text": "Hello. This is a test for PreView video automation."},
+    {"id": "tts2", "text": "This voiceover was generated using Google Cloud text to speech."}
+  ]
+}
