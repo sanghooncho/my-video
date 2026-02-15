@@ -20,3 +20,7 @@ out
 .playwright-mcp/
 .roo/
 .windsurf/
+
+# Local render env + outputs
+.mamba/
+renders/

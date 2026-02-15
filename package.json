@@ -28,9 +28,9 @@
     "webpack": "^5.104.1"
   },
   "scripts": {
-    "dev": "/opt/homebrew/opt/node@20/bin/npx remotion studio",
-    "build": "/opt/homebrew/opt/node@20/bin/npx remotion bundle",
-    "render": "/opt/homebrew/opt/node@20/bin/npx remotion render",
+    "dev": "npx remotion studio",
+    "build": "npx remotion bundle",
+    "render": "npx remotion render",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },
